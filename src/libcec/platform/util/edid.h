@@ -50,6 +50,11 @@ namespace PLATFORM
     {
       uint16_t iPA(0);
 
+      if (size < 4)
+      {
+        return iPA;
+      }
+
       for (size_t iPtr = 0; iPtr < size - 4; iPtr++)
       {
         if (data[iPtr]     == 0x03 &&
